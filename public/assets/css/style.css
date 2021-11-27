@@ -1,0 +1,10 @@
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  max-height: 50px;
+  
+}
