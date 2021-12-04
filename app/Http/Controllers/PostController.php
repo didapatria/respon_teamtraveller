@@ -11,6 +11,7 @@ class PostController extends Controller
         return view('home', [
             // ini array nanti buat isi datanya!!
             // sama harus buat model nya terlebih dahulu!!
+            'title' => 'Home'
         ]);
     }
 }

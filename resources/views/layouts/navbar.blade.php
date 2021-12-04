@@ -19,6 +19,9 @@
         <li class="nav-item">
           <a class="nav-link {{ Request::is('brands') ? 'active' : '' }}" href="/brands">Brands</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href=""></a>
+        </li>
         @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,7 +40,7 @@
           </li>
         @else
           <li class="nav-item bg-light rounded-pill">
-            <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }} black-text"><i data-feather="log-in"></i> Login</a>
+            <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }} black-text"><span data-feather="log-in"></span> Login</a>
           </li>
         @endauth
       </ul>
@@ -45,4 +48,3 @@
     </div>
   </div>
 </nav>
-<img src="/assets/img/cover.png" alt="cover" class="cover">
