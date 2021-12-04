@@ -5,7 +5,6 @@ body {
 }
 
 .cover {
-  width: 100%;
   height: auto;
   background-size: cover;
 }
@@ -29,10 +28,30 @@ nav {
   max-height: 70px;
 }
 
-li.bg-light {
-  margin-left: 30px;
-}
-
 a.black-text {
   color: #1e1e1e !important;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+.bg-respon {
+  background-color: rgb(30, 30, 30); 
+}
+
+.ml-flex {
+  margin-left: 10px;
+}
+
+.card-form {
+  min-width: 50vh;
+}
+
+
+.bg-img{
+  width: 100%;
+  height: auto;
+  background-image: url("/assets/img/lr.png");
+  background-size: cover;
 }
