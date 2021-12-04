@@ -4,11 +4,11 @@ body {
   background-color: rgb(211, 211, 211);
 }
 
-body .cover {
+.cover {
   width: 100%;
-  height: 965px;
-  background: url('/assets/img/cover.png');
+  height: auto;
   background-size: cover;
+  margin-top: -100px;
 }
 
 .navbar nav {
