@@ -8,11 +8,15 @@ body {
   width: 100%;
   height: auto;
   background-size: cover;
-  margin-top: -100px;
 }
 
-.navbar nav {
-  background-color: transparent;
+nav {
+  background-color: rgb(30, 30, 30);
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .navbar-logo {
