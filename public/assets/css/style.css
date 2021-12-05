@@ -1,57 +1,90 @@
+/*
+  Created by: Dida Patria - Team Traveller
+  Daftar Isi:
+  - CSS Utilities
+  - Custom Bootstrap
+*/
+
+/* 
+  CSS Utilities
+  1.1 Margin
+  1.2 Width & Height
+  1.3 Color
+*/
+
+/* 1.1 Margin */
+.ml-flex {
+  margin-left: 10px;
+}
+
+/* 1.2 Width & Height */
+.vh100 {
+  height: 100vh;
+}
+
+/* 1.3 Color */
+.bg-respon {
+  background-color: rgb(30, 30, 30); 
+}
+.bg-orange {
+  background-color: #f7941d;
+}
+
+/*
+  Custom Bootstrap
+  2.1 Body
+  2.2 Navbar
+  2.3 Home
+  2.4 Login & Register
+  2.5 Card
+*/
+
+/* 2.1 Body */
 body {
   margin: 0px;
   padding: 0px;
   background-color: rgb(211, 211, 211);
 }
 
-.cover {
-  height: auto;
-  background-size: cover;
-}
-
+/* 2.2 Navbar */
 nav {
   background-color: rgb(30, 30, 30);
 }
-
 .navbar {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-
 .navbar-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-
 .navbar-logo img {
   max-height: 70px;
 }
-
-a.black-text {
-  color: #1e1e1e !important;
+nav ul li.bg-orange:hover {
+  background-color: #fff;
 }
 
-.vh100 {
-  height: 100vh;
+/* 2.3 Home */
+.cover {
+  height: auto;
+  background-size: cover;
 }
 
-.bg-respon {
-  background-color: rgb(30, 30, 30); 
-}
-
-.ml-flex {
-  margin-left: 10px;
-}
-
-.card-form {
-  min-width: 50vh;
-}
-
-
+/* 2.4 Login & Register */
 .bg-img{
   width: 100%;
   height: auto;
   background-image: url("/assets/img/lr.png");
   background-size: cover;
 }
+
+/* 2.5 Card */
+.card-form {
+  min-width: 50vh;
+}
+
+
+
+
