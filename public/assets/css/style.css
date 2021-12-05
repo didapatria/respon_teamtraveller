@@ -63,7 +63,7 @@ nav {
   max-height: 70px;
 }
 nav ul li.bg-orange:hover {
-  background-color: #fff;
+  background-color: rgb(211, 211, 211);
 }
 
 /* 2.3 Home */
