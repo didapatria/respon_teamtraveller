@@ -4,13 +4,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-6 vh100 d-flex align-content-center flex-wrap text-center bg-respon text-light">
-      <div class="m-auto">
-        <h2>Selamat Datang</h2>
-        <span>Kelola data smartphone dan review smartphone melalui Respon Dashboard</span>
-      </div>
-    </div>
-    <div class="col-sm-6 vh100 d-flex align-content-center flex-wrap">
+    <div class="col-sm-12 vh100 d-flex align-content-center flex-wrap">
       <div class="m-auto">
         <div class="row">
           <div class="col">
@@ -68,10 +62,6 @@
                     {{ $message }}
                   </div>
                 @enderror
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                <label class="form-check-label" for="remember">Remember me</label>
               </div>
               <div class="row mb-0">
                 <div class="col-sm-12 d-flex justify-content-end">

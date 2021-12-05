@@ -39,8 +39,8 @@
             </ul>
           </li>
         @else
-          <li class="nav-item bg-light rounded-pill">
-            <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }} black-text"><span data-feather="log-in"></span> Login</a>
+          <li class="nav-item bg-orange rounded-pill">
+            <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }} text-dark"><span data-feather="log-in"></span> Login</a>
           </li>
         @endauth
       </ul>
