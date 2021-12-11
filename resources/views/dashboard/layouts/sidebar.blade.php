@@ -8,9 +8,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
-          <span data-feather="file-text"></span>
-          My Posts
+        <a class="nav-link {{ Request::is('dashboard/chnge-password') ? 'active' : '' }} disabled" href="/dashboard/change-password">
+          <span data-feather="lock"></span>
+          Change Password
         </a>
       </li>
     </ul>
@@ -21,9 +21,21 @@
       </h6>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
-            <span data-feather="grid"></span>
-            Post Categories
+          <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
+            <span data-feather="file-text"></span>
+            All Posts
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/brands*') ? 'active' : '' }} disabled" href="/dashboard/brands">
+            <span data-feather="smartphone"></span>
+            Brands Smartphone
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }} disabled" href="/dashboard/users">
+            <span data-feather="user-plus"></span>
+            Users Role
           </a>
         </li>
       </ul>

@@ -2,7 +2,8 @@
 
 @section('container')
 <section>
-  <div class="container mt-5">
+  <div class="container mt-3">
+    <h1>Brands Smartphone</h1>
     <!-- Row for the card-->
     <div class="row w-100 p-0 w-0">
       <!-- Column for card-->
