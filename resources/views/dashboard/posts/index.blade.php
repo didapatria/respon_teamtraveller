@@ -22,7 +22,7 @@
           <td>
               <a href="" class="badge bg-info"><span data-feather="eye"></span></a>
               <a href="" class="badge bg-warning"><span data-feather="edit"></span></a>
-              <a href="" class="badge bg-danger"><span data-feather="x-circle"></span></a>
+              <a href="" class="badge bg-danger"><span data-feather="delete"></span></a>
           </td>
         </tr>
         @endforeach
