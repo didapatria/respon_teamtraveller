@@ -18,8 +18,19 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('image')->nullable();
-            $table->text('excerpt');
-            $table->text('body');
+            $table->string('status');
+            $table->string('weight');
+            $table->string('os');
+            $table->string('internal');
+            $table->double('size');
+            $table->string('resolution');
+            $table->integer('photo');
+            $table->integer('video');
+            $table->string('ram');
+            $table->string('chipset');
+            $table->integer('capacity');
+            $table->string('technology');
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }
