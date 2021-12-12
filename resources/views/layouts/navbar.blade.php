@@ -14,9 +14,6 @@
           <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('detail') ? 'active' : '' }} disabled" href="/detail">Detail</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link {{ Request::is('brands') ? 'active' : '' }}" href="/brands">Brands</a>
         </li>
         <li class="nav-item">

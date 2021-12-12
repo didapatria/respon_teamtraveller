@@ -94,7 +94,7 @@
       </div>
       <div class="mb-3 col-md-6">
         <label for="size" class="form-label">Display Size</label>
-        <input type="number" step=".1" class="form-control @error('size') is-invalid @enderror" id="size" name="size" required value="{{ old('size') }}">
+        <input type="number" step=".01" class="form-control @error('size') is-invalid @enderror" id="size" name="size" required value="{{ old('size') }}">
         @error('size')
         <div class="invalid-feedback">
           {{ $message }}
