@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
@@ -20,8 +20,9 @@ use App\Http\Controllers\DashboardPostController;
 */
 
 Route::get('/', [PostController::class, 'index']);
+Route::get('/detail/{post:slug}', [PostController::class, 'show']);
 
-Route::get('/brands', [BrandsController::class, 'index']);
+Route::get('/brands', [BrandController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

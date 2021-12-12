@@ -11,7 +11,17 @@ class Post extends Model
     use HasFactory, Sluggable;
 
     protected $guarded = ['id'];
+    protected $with = ['brand', 'author'];
 
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 
     public function getRouteKeyName()
     {

@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class BrandsController extends Controller
+class BrandController extends Controller
 {
     public function index()
     {
         return view('brands', [
-            'title' => 'Brands'
+            'title' => 'Brands',
+            'brand' => Brand::all()
         ]);
     }
 }
