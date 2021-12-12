@@ -18,24 +18,25 @@
         <label for="title" class="form-label">Title</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title') }}">
         @error('title')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
         @enderror
       </div>
       <div class="mb-3 col-md-6">
         <label for="slug" class="form-label">Slug</label>
         <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
         @error('slug')
-        <div class="invalid-feedback">
-          {{ $message }}
-        </div>
+          <div class="invalid-feedback">
+            {{ $message }}
+          </div>
         @enderror
       </div>
       <div class="mb-3 col-md-6">
         <label for="brands" class="form-label">Brands Smartphone</label>
         <select class="form-select" name="brand_id">
           <option value="{{ old('brands') }}" selected>Choose: -- Brands --</option>
+          <option value="{{ old('brands') }}">Apple</option>
           {{-- @foreach ($brands as $brand)
             @if (old('brand_id') == $brand->id)
               <option value="{{ $brand->id }}" selected>{{ $brand->name }}</option>
@@ -158,7 +159,7 @@
         <label for="technology" class="form-label">Battery Technology</label>
         <select class="form-select" name="technology">
           <option value="{{ old('capacity') }}" selected>Choose: -- Battery --</option>
-          <option value="{{ old('capacity') }}">Li-ion</option>
+          <option value="{{ old('capacity') }}">Li-Ion</option>
           <option value="{{ old('capacity') }}">Li-Po</option>
           <option value="{{ old('capacity') }}">Li-Fe</option>
           <option value="{{ old('capacity') }}">NiCd</option>
@@ -180,4 +181,33 @@
     </form>
   
 </div>
+
+<script>
+  const title = document.querySelector('#title');
+  const slug = document.querySelector('#slug');
+
+  title.addEventListener('change', function() {
+    fetch('/dashboard/posts/checkSlug?title=' + title.value)
+      .then(response => response.json())
+      .then(data => slug.value = data.slug)
+  })
+
+  document.addEventListener('trix-file-accept', function(e) {
+    e.preventDefault();
+  })
+
+  function previewImage() {
+    const image = document.querySelector('#image');
+    const imgPreview = document.querySelector('.img-preview');
+
+    imgPreview.style.display = 'block';
+
+    const oFReader = new FileReader();
+    oFReader.readAsDataURL(image.files[0]);
+
+    oFReader.onload = function(oFREvent) {
+      imgPreview.src = oFREvent.target.result;
+    }
+  }
+</script>
 @endsection
