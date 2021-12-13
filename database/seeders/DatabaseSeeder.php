@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Adinda Fadhil Patria',
             'username' => 'didapatria',
             'email' => 'didapatria3@gmail.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'is_admin' => 1
         ]);
 
         Brand::create([

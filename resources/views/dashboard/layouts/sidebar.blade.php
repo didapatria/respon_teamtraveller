@@ -8,7 +8,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link {{ Request::is('dashboard/chnge-password') ? 'active' : '' }} disabled" href="/dashboard/change-password">
+        <a class="nav-link {{ Request::is('dashboard/request-admin') ? 'active' : '' }} disabled" href="/dashboard/request-admin">
+          <span data-feather="message-square"></span>
+          Request Admin
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{ Request::is('dashboard/change-password') ? 'active' : '' }} disabled" href="/dashboard/change-password">
           <span data-feather="lock"></span>
           Change Password
         </a>
