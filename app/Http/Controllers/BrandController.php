@@ -11,7 +11,7 @@ class BrandController extends Controller
     {
         return view('brands', [
             'title' => 'Brands',
-            'brand' => Brand::all()
+            'brands' => Brand::all()
         ]);
     }
 }
