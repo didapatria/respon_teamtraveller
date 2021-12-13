@@ -3,7 +3,7 @@
     <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="/dashboard">
-          <span data-feather="home"></span>
+          <span data-feather="layout"></span>
           Dashboard
         </a>
       </li>
@@ -46,6 +46,20 @@
         </li>
       </ul>
     @endcan
+
+    <div class="dropdown px-3 mt-4">
+      <button class="btn bg-orange dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><span data-feather="smile"></span> <b>Hello!,</b> {{ auth()->user()->name }}</button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="/"><span data-feather="home"></span> Home</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <form action="/logout" method="post">
+            @csrf
+            <button type="submit" class="dropdown-item"><span data-feather="log-out"></span> Logout</button>
+          </form>
+        </li>
+      </ul>
+    </div>
 
   </div>
 </nav>
