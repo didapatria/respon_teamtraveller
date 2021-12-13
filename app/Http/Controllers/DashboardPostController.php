@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use Illuminate\Support\Str;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
@@ -31,7 +31,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.create', [
             'title' => 'Create',
-            // 'brands' => Brand::all()
+            'brands' => Brand::all()
         ]);
     }
 
@@ -67,7 +67,6 @@ class DashboardPostController extends Controller
         }
 
         $validateData['user_id'] = auth()->user()->id;
-        $validateData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
         Post::create($validateData);
 

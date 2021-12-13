@@ -19,6 +19,7 @@
         <li class="nav-item">
           <a class="nav-link" href=""></a>
         </li>
+        
         @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,8 +41,8 @@
             <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }} text-dark"><span data-feather="log-in"></span> Login</a>
           </li>
         @endauth
-      </ul>
 
+      </ul>
     </div>
   </div>
 </nav>
