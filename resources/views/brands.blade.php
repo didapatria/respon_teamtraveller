@@ -4,70 +4,43 @@
 <section>
   <div class="container mt-3">
     <h1>Brands Smartphone</h1>
-    <!-- Row for the card-->
-    <div class="row w-100 p-0 w-0">
-      <!-- Column for card-->
-      <div class="col-lg-4 mb-2">
-        <div class="card mx-auto" ><a href="#" class="btn">
-          <img class="card-img-top" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Card image cap" /></a>
-          <div class="card-body">
-            <h5 class="card-title">iPhone</h5>
-          </div>
+    
+    <div class="row">
+      @if ($brands->count())
+        <div class="col-md-8 mb-3">
+          <a href="/?brand={{ $brands[0]->slug }}">
+            <div class="card bg-dark text-white">
+              @if ($brands[0]->image)
+                <img src="{{ asset('storage/' . $brands[0]->image) }}" alt="{{ $brands[0]->name }}" class="card-img brands-img">
+              @else
+                <img src="https://source.unsplash.com/1600x900?{{ $brands[0]->name }}" class="card-img brands-img" alt="{{ $brands[0]->name }}">
+              @endif
+              <div class="card-img-overlay d-flex align-items-end p-0">
+                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(247, 148, 29, 0.7)">{{ $brands[0]->name }}</h5>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
+      @endif
 
-      <!-- Another column for card -->
-      <div class="col-lg-4 mb-2">
-        <div class="card mx-auto" ><a href="#" class="btn">
-          <img class="card-img-top" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Card image cap" /></a>
-          <div class="card-body">
-            <h5 class="card-title">Xiaomi</h5>
-          </div>
+      @foreach ($brands->skip(1) as $brand)
+        <div class="col-md-4 mb-3">
+          <a href="/?brand={{ $brand->slug }}">
+            <div class="card bg-dark text-white">
+              @if ($brand->image)
+                <img src="{{ asset('storage/' . $brand->image) }}" alt="{{ $brand->name }}" class="card-img brands-img">
+              @else
+                <img src="https://source.unsplash.com/1600x900?{{ $brand->name }}" class="card-img brands-img" alt="{{ $brand->name }}">
+              @endif
+              <div class="card-img-overlay d-flex align-items-end p-0">
+                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(247, 148, 29, 0.7)">{{ $brand->name }}</h5>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
+      @endforeach
 
-      <!-- Another column for card -->
-      <div class="col-lg-4 mb-2">
-        <div class="card mx-auto" ><a href="#" class="btn">
-          <img class="card-img-top" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" alt="Card image cap" /></a>
-          <div class="card-body">
-            <h5 class="card-title">Samsung</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Another column for card -->
-      <div class="col-lg-4 mb-2">
-        <div class="card mx-auto" ><a href="#" class="btn">
-          <img class="card-img-top" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Vivo_Logo.svg" alt="Card image cap" /></a>
-          <div class="card-body">
-            <h5 class="card-title">Vivo</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Another column for card -->
-      <div class="col-lg-4 mb-2">
-        <div class="card mx-auto" ><a href="#" class="btn">
-          <img class="card-img-top" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/OPPO_Logo.svg" alt="Card image cap" /></a>
-          <div class="card-body">
-            <h5 class="card-title">Oppo</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Another column for card -->
-      <div class="col-lg-4 mb-2">
-        <div class="card mx-auto" ><a href="#" class="btn">
-          <img class="card-img-top" height="150px" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Realme-realme-_logo_box-RGB-01.svg" alt="Card image cap" /></a>
-          <div class="card-body">
-            <h5 class="card-title">Realme</h5>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-  </div>
-
 </section>
 @endsection
