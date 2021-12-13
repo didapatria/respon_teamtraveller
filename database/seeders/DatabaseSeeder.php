@@ -25,98 +25,82 @@ class DatabaseSeeder extends Seeder
 
         Brand::create([
             'name' => 'Apple',
-            'slug' => 'apple',
-            'image' => 'apple.svg'
+            'slug' => 'apple'
         ]);
 
         Brand::create([
             'name' => 'Xiaomi',
-            'slug' => 'xiaomi',
-            'image' => 'xiaomi.svg'
+            'slug' => 'xiaomi'
         ]);
 
         Brand::create([
             'name' => 'Samsung',
-            'slug' => 'samsung',
-            'image' => 'samsung.svg'
+            'slug' => 'samsung'
         ]);
 
         Brand::create([
             'name' => 'Oppo',
-            'slug' => 'oppo',
-            'image' => 'oppo.svg'
+            'slug' => 'oppo'
         ]);
 
         Brand::create([
             'name' => 'Vivo',
-            'slug' => 'vivo',
-            'image' => 'vivo.svg'
+            'slug' => 'vivo'
         ]);
 
         Brand::create([
             'name' => 'Realme',
-            'slug' => 'realme',
-            'image' => 'realme.svg'
+            'slug' => 'realme'
         ]);
 
         Brand::create([
             'name' => 'Asus',
-            'slug' => 'asus',
-            'image' => 'asus.svg'
+            'slug' => 'asus'
         ]);
 
         Brand::create([
             'name' => 'Huawei',
-            'slug' => 'huawei',
-            'image' => 'huawei.svg'
+            'slug' => 'huawei'
         ]);
 
         Brand::create([
             'name' => 'Sony',
-            'slug' => 'sony',
-            'image' => 'sony.svg'
+            'slug' => 'sony'
         ]);
 
         Brand::create([
             'name' => 'Nokia',
-            'slug' => 'nokia',
-            'image' => 'nokia.svg'
+            'slug' => 'nokia'
         ]);
 
         Brand::create([
             'name' => 'Lenovo',
-            'slug' => 'lenovo',
-            'image' => 'lenovo.svg'
+            'slug' => 'lenovo'
         ]);
 
         Brand::create([
             'name' => 'OnePlus',
-            'slug' => 'oneplus',
-            'image' => 'oneplus.svg'
+            'slug' => 'oneplus'
         ]);
 
         Brand::create([
             'name' => 'ZTE',
-            'slug' => 'zte',
-            'image' => 'zte.svg'
+            'slug' => 'zte'
         ]);
 
         Brand::create([
             'name' => 'LG',
-            'slug' => 'lg',
-            'image' => 'lg.svg'
+            'slug' => 'lg'
         ]);
 
         Brand::create([
             'name' => 'HTC',
-            'slug' => 'htc',
-            'image' => 'htc.svg'
+            'slug' => 'htc'
         ]);
 
         Brand::create([
             'name' => 'Meizu',
-            'slug' => 'meizu',
-            'image' => 'meizu.svg'
+            'slug' => 'meizu'
         ]);
     }
 }
