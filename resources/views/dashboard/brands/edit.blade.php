@@ -27,7 +27,7 @@
         </div>
         <div class="mb-3 col-md-12">
           <label for="slug" class="form-label">Slug</label>
-          <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug', $brand->slug) }}" disabled readonly>
+          <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug', $brand->slug) }}">
           @error('slug')
             <div class="invalid-feedback">
               {{ $message }}
@@ -48,12 +48,15 @@
       <button type="submit" class="btn btn-primary mt-3">Update Brand</button>
     </form>
   </div>
-  <div class="col-md-6 mt-4">
+
+  <div class="col-md-6 mt-3">
     <input type="hidden" name="oldImage" value="{{ $brand->image }}">
       @if ($brand->image)
-          <img src="{{ asset('storage/' . $brand->image) }}" class="img-preview img-fluid">
+        <img src="{{ asset('storage/' . $brand->image) }}" class="img-preview img-fluid">
+      @elseif ($brand->name)
+        <img src="https://source.unsplash.com/1600x900?{{ $brand->name }}" class="img-preview img-fluid" alt="{{ $brand->name }}">
       @else
-          <img class="img-preview img-fluid">
+        <img class="img-preview img-fluid">
       @endif
   </div>
 </div>

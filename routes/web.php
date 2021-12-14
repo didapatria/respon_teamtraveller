@@ -6,6 +6,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminBrandController;
 
@@ -39,3 +40,5 @@ Route::resource('/dashboard/posts', AdminPostController::class)->middleware('adm
 
 Route::get('/dashboard/brands/checkSlug', [AdminBrandController::class, 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/brands', AdminBrandController::class)->except('show')->middleware('admin');
+
+Route::resource('/dashboard/users', AdminUserController::class)->except('create, store, show')->middleware('admin');
