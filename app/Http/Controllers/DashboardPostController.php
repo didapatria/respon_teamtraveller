@@ -17,7 +17,7 @@ class DashboardPostController extends Controller
     public function index()
     {
         return view('dashboard.posts.index', [
-            'title' => 'Index Posts',
+            'title' => 'All Posts',
             'posts' => \App\Models\Post::all()
         ]);
     }
