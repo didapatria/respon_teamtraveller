@@ -54,9 +54,7 @@
     </div>
   <div class="card-footer bg-orange">
     <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span> Back to all posts</a>
-    <a href="
-    {{-- /dashboard/posts/{{ $posts->slug }}/edit --}}
-    " class="btn btn-warning text-light"><span data-feather="edit"></span> Edit</a>
+    <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-warning text-light"><span data-feather="edit"></span> Edit</a>
     <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
       @method('delete')
       @csrf
