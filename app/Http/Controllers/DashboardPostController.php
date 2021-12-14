@@ -96,7 +96,11 @@ class DashboardPostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('dashboard.posts.edit', [
+            'title' => 'Edit',
+            'post' => $post,
+            'brands' => Brand::all()
+        ]);
     }
 
     /**
@@ -108,7 +112,43 @@ class DashboardPostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $rules = [
+            'title' => 'required|max:255',
+            'brand_id' => 'required',
+            'image' => 'image|file|max:1024',
+            'status' => 'required',
+            'weight' => 'required',
+            'os' => 'required',
+            'internal' => 'required',
+            'size' => 'required',
+            'resolution' => 'required',
+            'photo' => 'required',
+            'video' => 'required',
+            'ram' => 'required',
+            'chipset' => 'required',
+            'capacity' => 'required',
+            'technology' => 'required'
+        ];
+
+        if ($request->slug != $post->slug) {
+            $rules['slug'] = 'required|unique:posts';
+        }
+
+        $validateData = $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validateData['image'] = $request->file('image')->store('post-images');
+        }
+
+        $validateData['user_id'] = auth()->user()->id;
+
+        Post::where('id', $post->id)
+            ->update($validateData);
+
+        return redirect('/dashboard/posts')->with('success', 'Post has been updated!');
     }
 
     /**
