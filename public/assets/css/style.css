@@ -97,6 +97,12 @@ nav ul li.bg-orange:hover {
 .card-form {
   min-width: 50vh;
 }
+.card-detail {
+  background: linear-gradient(to right, #fff, #f5993d);
+}
+.space {
+  border-left: 1px solid hsla(0,0%,100%,.5);
+}
 
 /* 2.6 Dashboard */
 

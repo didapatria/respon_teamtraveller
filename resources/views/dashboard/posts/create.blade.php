@@ -156,11 +156,11 @@
         <div class="mb-3 col-md-6">
           <label for="technology" class="form-label">Battery Technology</label>
           <select class="form-select" name="technology">
-            <option value="{{ old('capacity') }}" selected>Li-Ion</option>
-            <option value="{{ old('capacity') }}">Li-Po</option>
-            <option value="{{ old('capacity') }}">Li-Fe</option>
-            <option value="{{ old('capacity') }}">NiCd</option>
-            <option value="{{ old('capacity') }}">NiMh</option>
+            <option value="Li-Ion" selected>Li-Ion</option>
+            <option value="Li-Po">Li-Po</option>
+            <option value="Li-Fe">Li-Fe</option>
+            <option value="NiCd">NiCd</option>
+            <option value="NiMh">NiMh</option>
           </select>
         </div>
       </div>     
