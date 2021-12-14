@@ -57,9 +57,7 @@
     <a href="
     {{-- /dashboard/posts/{{ $posts->slug }}/edit --}}
     " class="btn btn-warning text-light"><span data-feather="edit"></span> Edit</a>
-    <form action="
-    {{-- /dashboard/posts/{{ $post->slug }} --}}
-    " method="post" class="d-inline">
+    <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
       @method('delete')
       @csrf
       <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><span data-feather="delete"></span> Delete</button>
