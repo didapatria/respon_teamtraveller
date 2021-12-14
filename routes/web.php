@@ -5,8 +5,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\AdminBrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('admin');
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('admin');
+Route::get('/dashboard/posts/checkSlug', [AdminPostController::class, 'checkSlug'])->middleware('admin');
+Route::resource('/dashboard/posts', AdminPostController::class)->middleware('admin');
+
+Route::get('/dashboard/brands/checkSlug', [AdminBrandController::class, 'checkSlug'])->middleware('admin');
+Route::resource('/dashboard/brands', AdminBrandController::class)->except('show')->middleware('admin');
