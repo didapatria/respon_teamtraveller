@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
-class DashboardPostController extends Controller
+class AdminPostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.index', [
             'title' => 'All Posts',
-            'posts' => \App\Models\Post::all()
+            'posts' => Post::paginate(6)->withQueryString()
         ]);
     }
 
@@ -48,7 +48,7 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
             'brand_id' => 'required',
-            'image' => 'image|file|max:1024',
+            'image' => 'image|file|max:4096',
             'status' => 'required',
             'weight' => 'required',
             'os' => 'required',
@@ -115,7 +115,7 @@ class DashboardPostController extends Controller
         $rules = [
             'title' => 'required|max:255',
             'brand_id' => 'required',
-            'image' => 'image|file|max:1024',
+            'image' => 'image|file|max:4096',
             'status' => 'required',
             'weight' => 'required',
             'os' => 'required',

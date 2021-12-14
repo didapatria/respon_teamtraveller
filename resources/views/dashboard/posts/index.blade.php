@@ -46,4 +46,7 @@
     </table>
   </div>
 </div>
+
+{{-- Pagination --}}
+{{ $posts->links() }}
 @endsection

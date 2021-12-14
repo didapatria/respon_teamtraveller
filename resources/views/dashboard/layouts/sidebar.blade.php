@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/brands*') ? 'active' : '' }} disabled" href="/dashboard/brands">
+          <a class="nav-link {{ Request::is('dashboard/brands*') ? 'active' : '' }}" href="/dashboard/brands">
             <span data-feather="smartphone"></span>
             Brands Smartphone
           </a>

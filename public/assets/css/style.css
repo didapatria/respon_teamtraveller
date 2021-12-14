@@ -60,9 +60,6 @@ body {
 }
 
 /* 2.2 Navbar */
-nav {
-  background-color: rgb(30, 30, 30);
-}
 .navbar {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -98,7 +95,7 @@ nav ul li.bg-orange:hover {
   min-width: 50vh;
 }
 .card-detail {
-  background: linear-gradient(to right, #fff, #f5993d);
+  background: linear-gradient(to right, #fff, rgb(245, 153, 61));
 }
 .space {
   border-left: 1px solid hsla(0,0%,100%,.5);

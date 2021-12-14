@@ -3,8 +3,8 @@
 <div class="card my-3" style="max-width: 100vh;">
   <div class="card-header bg-orange text-light"><h4><b>{{ $post->brand->name }} {{ $post->title }}</b></h4></div>
     <div class="row g-0">
-      <div class="col-md-3">
-        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid rounded-start m-1" alt="{{ $post->brand->name }}">
+      <div class="col-md-3 align-self-center">
+        <img src="{{ asset('storage/' . $post->image) }}" class="img-fluid rounded-start mx-1" alt="{{ $post->brand->name }}">
       </div>
       <div class="col-md-9 card-detail">
         <div class="row px-3">
@@ -29,7 +29,7 @@
           <div class="col-md-4 space my-2">
             <div class="card-body">
               <span data-feather="aperture"></span>
-              <h1 class="card-title mb-1"><b>{{ $post->photo }}<span class="h3" style="font-weight: 800;">MP</span></b></h1>
+              <h1 class="card-title mb-1"><b>{{ $post->photo }}<span class="h5" style="font-weight: 800;">MP</span></b></h1>
               <p class="card-text mb-1">{{ $post->video }}p</p>
             </div>
           </div>
@@ -37,7 +37,7 @@
           <div class="col-md-4 space my-2">
             <div class="card-body">
               <span data-feather="cpu"></span>
-              <h1 class="card-title mb-1"><b>{{ $post->ram }}<span class="h3" style="font-weight: 800;">GB RAM</span></b></h1>
+              <h1 class="card-title mb-1"><b>{{ $post->ram }}<span class="h5" style="font-weight: 800;">GB RAM</span></b></h1>
               <p class="card-text mb-1">{{ $post->chipset }}</p>
             </div>
           </div>
@@ -45,7 +45,7 @@
           <div class="col-md-4 space my-2">
             <div class="card-body">
               <span data-feather="battery"></span>
-              <h1 class="card-title mb-1"><b>{{ $post->capacity }}<span class="h3" style="font-weight: 800;">mAh</span></b></h1>
+              <h1 class="card-title mb-1"><b>{{ $post->capacity }}<span class="h5" style="font-weight: 800;">mAh</span></b></h1>
               <p class="card-text mb-1">{{ $post->technology }}</p>
             </div>
           </div>
