@@ -1,4 +1,4 @@
-<div class="bg-respon text-light mt-5">
+<div class="bg-respon text-light">
   <div class="container">
     <footer class="py-5">
       <div class="row">
