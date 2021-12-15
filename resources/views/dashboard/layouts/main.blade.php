@@ -11,6 +11,9 @@
     {{-- My Style --}}
     <link rel="stylesheet" href="/assets/css/style.css">
 
+    {{-- Bootstrap Icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
     <link rel="icon" type="image/png" href="/assets/img/respon-logo.png">
     <title>Respon | {{ $title }}</title>
   </head>

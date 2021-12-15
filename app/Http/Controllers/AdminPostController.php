@@ -31,7 +31,7 @@ class AdminPostController extends Controller
     public function create()
     {
         return view('dashboard.posts.create', [
-            'title' => 'Create',
+            'title' => 'Create Post',
             'brands' => Brand::all()
         ]);
     }
@@ -83,7 +83,7 @@ class AdminPostController extends Controller
     public function show(Post $post)
     {
         return view('dashboard.posts.show', [
-            'title' => 'Show',
+            'title' => 'Show Post',
             'post' => $post
         ]);
     }
@@ -97,7 +97,7 @@ class AdminPostController extends Controller
     public function edit(Post $post)
     {
         return view('dashboard.posts.edit', [
-            'title' => 'Edit',
+            'title' => 'Edit Post',
             'post' => $post,
             'brands' => Brand::all()
         ]);

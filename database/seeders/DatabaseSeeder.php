@@ -23,6 +23,13 @@ class DatabaseSeeder extends Seeder
             'is_admin' => 1
         ]);
 
+        User::create([
+            'name' => 'User',
+            'username' => 'user',
+            'email' => 'user@gmail.com',
+            'password' => bcrypt('password'),
+        ]);
+
         Brand::create([
             'name' => 'Apple',
             'slug' => 'apple'
