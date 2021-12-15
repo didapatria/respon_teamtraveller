@@ -82,8 +82,6 @@ class AdminUserController extends Controller
 
         $validateData = $request->validate($rules);
 
-        $validateData['user_id'] = auth()->user()->id;
-
         User::where('id', $user->id)
             ->update($validateData);
 
