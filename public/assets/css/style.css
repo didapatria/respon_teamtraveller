@@ -28,6 +28,16 @@
   object-fit: cover;
   object-position: center;
 }
+.posts-img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+.post-img {
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
 
 /* 1.3 Color */
 .bg-respon {

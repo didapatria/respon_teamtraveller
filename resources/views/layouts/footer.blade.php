@@ -1,6 +1,6 @@
 <div class="bg-respon text-light mt-5">
   <div class="container">
-    <footer class="pt-5 pb-1">
+    <footer class="py-5">
       <div class="row">
         <div class="col-7">
           <a href="/" class="navbar-logo">
