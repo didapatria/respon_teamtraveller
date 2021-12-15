@@ -41,6 +41,9 @@
       @endforeach
 
     </div>
+    {{-- Pagination --}}
+    {{ $brands->links() }}
   </div>
 </section>
+
 @endsection

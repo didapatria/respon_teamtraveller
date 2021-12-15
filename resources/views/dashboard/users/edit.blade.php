@@ -10,7 +10,7 @@
   </div>
 @endif
 
-<form method="post" action="/dashboard/users/{{ $user->username }}" class="mb-5" enctype="multipart/form-data">
+<form method="post" action="/dashboard/users/{{ $user->username }}" class="mb-5">
   @method('put')
   @csrf
   <h2 class="text-center">{{ old('name', $user->name) }}</h2>

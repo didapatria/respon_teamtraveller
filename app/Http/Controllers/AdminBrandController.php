@@ -30,7 +30,7 @@ class AdminBrandController extends Controller
     public function create()
     {
         return view('dashboard.brands.create', [
-            'title' => 'Create'
+            'title' => 'Create Brand'
         ]);
     }
 
@@ -77,7 +77,7 @@ class AdminBrandController extends Controller
     public function edit(Brand $brand)
     {
         return view('dashboard.brands.edit', [
-            'title' => 'Edit',
+            'title' => 'Edit Brand',
             'brand' => $brand
         ]);
     }

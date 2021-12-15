@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ChangeController;
+use App\Http\Controllers\RequestController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminUserController;
@@ -34,6 +36,9 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/request', [RequestController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/change', [ChangeController::class, 'index'])->middleware('auth');
+Route::put('/dashboard/change', [ChangeController::class, 'update'])->middleware('auth');
 
 Route::get('/dashboard/posts/checkSlug', [AdminPostController::class, 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/posts', AdminPostController::class)->middleware('admin');
@@ -41,4 +46,4 @@ Route::resource('/dashboard/posts', AdminPostController::class)->middleware('adm
 Route::get('/dashboard/brands/checkSlug', [AdminBrandController::class, 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/brands', AdminBrandController::class)->except('show')->middleware('admin');
 
-Route::resource('/dashboard/users', AdminUserController::class)->except('create, store, show')->middleware('admin');
+Route::resource('/dashboard/users', AdminUserController::class)->except(['create', 'store', 'show'])->middleware('admin');

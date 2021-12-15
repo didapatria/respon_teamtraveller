@@ -62,7 +62,7 @@ class AdminUserController extends Controller
     public function edit(User $user)
     {
         return view('dashboard.users.edit', [
-            'title' => 'Edit',
+            'title' => 'Edit Brand',
             'user' => $user
         ]);
     }
