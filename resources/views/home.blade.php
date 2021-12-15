@@ -3,7 +3,7 @@
 @section('container')
   <img src="/assets/img/cover.png" alt="cover" class="cover w-100">
 
-  <div class="container mt-4">
+  <div class="container my-4">
 
     {{-- Search --}}
     <div class="row justify-content-end">
@@ -23,9 +23,8 @@
       </div>
     </div>
 
-    <h1 class="mb-4">Latest Post Review Smartphone</h1>
-
-    <div class="row">
+    <div class="row mb-4">
+      <h1 class="mb-4">Latest Post Review Smartphone</h1>
       @if ($posts->count())
       <div class="col-md-6 mb-3">
         <div class="card bg-orange">
@@ -70,5 +69,34 @@
     <div class="d-flex justify-content-end">
       {{ $posts->links() }}
     </div>
+
   </div>
+    
+    <div class="bg-orange">
+      <div class="container">
+        <div class="row">
+          <h1 class="my-4">Popular Prand</h1>
+          @foreach ($brands as $brand)
+            <div class="col-md-2 mb-3">
+              <a href="/?brand={{ $brand->slug }}">
+                <div class="card bg-dark text-white">
+                  @if ($brand->image)
+                    <img src="{{ asset('storage/' . $brand->image) }}" alt="{{ $brand->name }}" class="card-img brand-img ratio">
+                  @else
+                    <img src="https://source.unsplash.com/1600x900?{{ $brand->name }}" class="card-img brand-img ratio" alt="{{ $brand->name }}">
+                  @endif
+                  <div class="card-img-overlay d-flex align-items-end p-0">
+                    <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(30, 30, 30, 0.7)">{{ $brand->name }}</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          @endforeach
+        </div>
+        {{-- Pagination --}}
+        <div class="d-flex justify-content-end pb-4">
+          {{ $brands->links() }}
+        </div>
+      </div>
+    </div>
 @endsection

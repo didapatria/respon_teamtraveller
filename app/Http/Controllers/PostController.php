@@ -24,7 +24,8 @@ class PostController extends Controller
 
         return view('home', [
             'title' => 'Home',
-            'posts' => Post::latest()->filter(request(['search', 'brand', 'auhtor']))->paginate(7)->withQueryString()
+            'posts' => Post::latest()->filter(request(['search', 'brand', 'auhtor']))->paginate(7)->withQueryString(),
+            'brands' => Brand::latest()->paginate(12)->withQueryString()
         ]);
     }
 
