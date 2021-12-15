@@ -52,8 +52,6 @@ class AdminBrandController extends Controller
             $validateData['image'] = $request->file('image')->store('brand-images');
         }
 
-        $validateData['user_id'] = auth()->user()->id;
-
         Brand::create($validateData);
 
         return redirect('/dashboard/brands')->with('success', 'New brand has been added!');
@@ -111,8 +109,6 @@ class AdminBrandController extends Controller
             }
             $validateData['image'] = $request->file('image')->store('brand-images');
         }
-
-        $validateData['user_id'] = auth()->user()->id;
 
         Brand::where('id', $brand->id)
             ->update($validateData);

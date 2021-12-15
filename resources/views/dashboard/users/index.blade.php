@@ -26,11 +26,11 @@
         <td>{{ $loop->iteration }}</td>
         <td>{{ $user->name }}</td>
         <td>
-          <button type="button" class="btn btn-success btn-sm p-0">
-            @if ($user->is_admin = 1)
-                Admin
+          <button type="button" class="btn btn-success btn-sm p-0 disabled">
+            @if ($user->is_admin == 1)
+              <small>Admin</small>
             @else
-                User
+              <small>User</small> 
             @endif
           </button>
         </td>

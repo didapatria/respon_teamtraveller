@@ -17,12 +17,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <input type="radio" class="btn-check" name="is_admin" id="option1" autocomplete="off" required value="{{ $user->is_admin = 1 }}" checked>
-        <label class="btn ratio ratio-1x1" for="option1"><img src="/assets/img/admin.png" alt="admin"></label>
+        <input type="radio" class="btn-check" name="is_admin" id="is_admin1" autocomplete="off" required value="1">
+        <label class="btn ratio ratio-1x1" for="is_admin1"><img src="/assets/img/admin.png" alt="admin"></label>
       </div>
       <div class="col-md-6">
-        <input type="radio" class="btn-check" name="is_admin" id="option2" autocomplete="off" required value="{{ $user->is_admin = 0 }}">
-        <label class="btn ratio ratio-1x1" for="option2"><img src="/assets/img/user.png" alt="user"></label>
+        <input type="radio" class="btn-check" name="is_admin" id="is_admin2" autocomplete="off" required value="0">
+        <label class="btn ratio ratio-1x1" for="is_admin2"><img src="/assets/img/user.png" alt="user"></label>
       </div>
     </div>
     <button type="submit" class="btn btn-primary mt-3 w-100">Update User</button>
