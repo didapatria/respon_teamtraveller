@@ -4,7 +4,7 @@
 <div class="container">
   <h1 class="my-4">Detail Review Smartphone</h1>
   <div class="card my-3">
-    <div class="card-header bg-orange text-light"><h4><b>{{ $post->brand->name }} {{ $post->title }}</b></h4></div>
+    <div class="card-header bg-orange text-light"><h4><b><a href="/?brand={{ $post->brand->slug }}" class="text-decoration-none text-light">{{ $post->brand->name }}</a> {{ $post->title }}</b></h4></div>
       <div class="row g-0">
         <div class="col-md-5 align-self-center">
           <img src="{{ asset('storage/' . $post->image) }}" class="rounded-start mx-1" style="height: 650px" alt="{{ $post->brand->name }}">

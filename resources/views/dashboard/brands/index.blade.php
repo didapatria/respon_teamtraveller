@@ -34,12 +34,12 @@
           @endif
         </td>
         <td>
-            <a href="/dashboard/brands/{{ $brand->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
-            <form action="/dashboard/brands/{{ $brand->slug }}" method="post" class="d-inline">
-              @method('delete')
-              @csrf
-              <button class="badge btn-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="delete"></span></button>
-            </form>
+          <a href="/dashboard/brands/{{ $brand->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+          <form action="/dashboard/brands/{{ $brand->slug }}" method="post" class="d-inline">
+            @method('delete')
+            @csrf
+            <button class="badge btn-danger border-0" onclick="return confirm('Are you sure?')"><span data-feather="delete"></span></button>
+          </form>
         </td>
       </tr>
       @endforeach

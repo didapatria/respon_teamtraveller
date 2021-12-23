@@ -45,8 +45,8 @@
       </tbody>
     </table>
   </div>
+  {{-- Pagination --}}
+  {{ $posts->links() }}
 </div>
 
-{{-- Pagination --}}
-{{ $posts->links() }}
 @endsection

@@ -18,11 +18,17 @@ class Post extends Model
         $query->when($filters['search'] ?? false, function ($query, $search) {
             return $query->where(function ($query) use ($search) {
                 $query->where('title', 'like', '%' . $search . '%')
+                    ->orWhere('status', 'like', '%' . $search . '%')
+                    ->orWhere('weight', 'like', '%' . $search . '%')
                     ->orWhere('os', 'like', '%' . $search . '%')
                     ->orWhere('internal', 'like', '%' . $search . '%')
+                    ->orWhere('size', 'like', '%' . $search . '%')
                     ->orWhere('resolution', 'like', '%' . $search . '%')
+                    ->orWhere('photo', 'like', '%' . $search . '%')
+                    ->orWhere('video', 'like', '%' . $search . '%')
                     ->orWhere('ram', 'like', '%' . $search . '%')
                     ->orWhere('chipset', 'like', '%' . $search . '%')
+                    ->orWhere('capacity', 'like', '%' . $search . '%')
                     ->orWhere('technology', 'like', '%' . $search . '%');
             });
         });
@@ -48,7 +54,7 @@ class Post extends Model
 
     public function brand()
     {
-        return $this->belongsTo(Brand::class);
+        return $this->belongsTo(Brand::class, 'brand_id');
     }
 
     public function author()

@@ -11,7 +11,7 @@ class BrandController extends Controller
     {
         return view('brands', [
             'title' => 'Brands',
-            'brands' => Brand::paginate(8)->withQueryString()
+            'brands' => Brand::paginate(7)->withQueryString()
         ]);
     }
 }
