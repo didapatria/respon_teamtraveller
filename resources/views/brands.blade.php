@@ -21,24 +21,44 @@
             </div>
           </a>
         </div>
-      @endif
-
-      @foreach ($brands->skip(1) as $brand)
-        <div class="col-md-4 mb-3">
-          <a href="/?brand={{ $brand->slug }}">
-            <div class="card bg-dark text-white">
-              @if ($brand->image)
+        
+        @foreach ($brands->slice(1, 5) as $brand)
+          <div class="col-md-4 mb-3">
+            <a href="/?brand={{ $brand->slug }}">
+              <div class="card bg-dark text-white">
+                @if ($brand->image)
                 <img src="{{ asset('storage/' . $brand->image) }}" alt="{{ $brand->name }}" class="card-img brands-img">
-              @else
+                @else
                 <img src="https://source.unsplash.com/1600x900?{{ $brand->name }}" class="card-img brands-img" alt="{{ $brand->name }}">
-              @endif
-              <div class="card-img-overlay d-flex align-items-end p-0">
-                <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(247, 148, 29, 0.7)">{{ $brand->name }}</h5>
+                @endif
+                <div class="card-img-overlay d-flex align-items-end p-0">
+                  <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(247, 148, 29, 0.7)">{{ $brand->name }}</h5>
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-      @endforeach
+            </a>
+          </div>
+        @endforeach
+
+        @if ($brands[6] !== null)
+          <div class="col-md-8 mb-3">
+            <a href="/?brand={{ $brands[6]->slug }}">
+              <div class="card bg-dark text-white">
+                @if ($brands[6]->image)
+                  <img src="{{ asset('storage/' . $brands[6]->image) }}" alt="{{ $brands[6]->name }}" class="card-img brands-img">
+                @else
+                  <img src="https://source.unsplash.com/1600x900?{{ $brands[6]->name }}" class="card-img brands-img" alt="{{ $brands[6]->name }}">
+                @endif
+                <div class="card-img-overlay d-flex align-items-end p-0">
+                  <h5 class="card-title text-center flex-fill p-2 fs-3" style="background-color: rgba(247, 148, 29, 0.7)">{{ $brands[6]->name }}</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        @else
+          <div class="" style="height: 186px"></div>
+        @endif
+
+      @endif
 
     </div>
     {{-- Pagination --}}
